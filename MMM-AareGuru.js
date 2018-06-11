@@ -31,9 +31,7 @@ Module.register('MMM-AareGuru', {
     api: 'https://aareguru.existenz.ch/v2018/current',
   },
 
-  getStyles: function () {
-    return ['MMM-AareGuru.css'];
-  },
+  requiresVersion: '2.2.1',
 
   start: function () {
     if (!['horizontal', 'vertical', 'none'].includes(this.config.forecast)) {
@@ -60,6 +58,10 @@ Module.register('MMM-AareGuru', {
       loading: false,
       forecast: this.config.forecast,
     };
+  },
+
+  getStyles: function () {
+    return ['MMM-AareGuru.css'];
   },
 
   getData: function () {
