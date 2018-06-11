@@ -1,0 +1,21 @@
+{% if loading %}
+  <div class="loading">Am lade…</div>
+{% else %}
+<div class="forecast-{{ forecast }}">
+  <div class="current">
+    <h1>Aktuell {{ location }}</h1>
+    <div class="temperature">{{ temperature }}º</div>
+    <div class="subtext">{{ temperature_text }}</div>
+  </div>
+  <div class="flow">
+    <span>Wassermängi</span>
+    <span>{{flow}} m&sup3;/s</span>
+    <span>{{flow_text}}</span>
+  </div>
+  <div class="forecast">
+    <h1>Tämperatur in 2 Std.</h1>
+    <div class="temperature">{{forecast2h}}º</div>
+    <div class="subtext">{{forecast2h_text}}</div>
+  </div>
+</div>
+{% endif %}

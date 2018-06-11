@@ -1,48 +1,44 @@
-# MMM-Aare
+# MMM-AareGuru
 
-This is a module for the [MagicMirror²](https://github.com/MichMich/MagicMirror/).
+*Don't speak Bärndütsch? [See this README in English](README-en.md).*
 
-The module displays the temperature of the river Aare in Bern. The data is
-provided by the Federal Office for the Environment (FOEN) also known as the
-*Bundesamt für Umwelt* (BAFU) in German. We read the data through an [API
-service of the *Bureau für digitale Existenz*](http://aare.schwumm.ch/api/)
-(many thanks!).
-
-We currently don't provide any temperature information for other swimming
-locations in Switzerland. If you have a good API source, please let me know and
-I'll be happy to add them.
-
-Please see [aare.guru](https://aare.guru/) for more information about swimming
-in the river and forecasts.
+Mit em MMM-AareGuru chasch d [aare.guru](https://aare.guru/) Tämperatur uf
+dim [MagicMirror²](https://github.com/MichMich/MagicMirror/) Spigu aazeige.
 
 ![Display](display.png)
 
 
-## Installation
+## Installiere
 
 ```shell
 cd ~/MagicMirror/modules
 ```
 
-Clone this repository:
+Repo kloone:
 ```shell
-git clone https://github.com/buge/MMM-Aare
+git clone https://github.com/buge/MMM-AareGuru
 ```
 
-Configure the module in your config.js file:
+Konfigurier ds Modul in dim `config.js`:
 ```js
 modules: [
 	{
-		module: 'MMM-Aare',
+		module: 'MMM-AareGuru',
 		position: 'top_right',
-		header: 'Aare',
+		header: 'aare.guru',
+		config: {
+			city: 'bern',
+			forecast: 'vertical',
+		}
 	},
 ]
 ```
 
 
-## Configuration Options
+## Konfigurationsoptione
 
-|      Option      |                     Description                    |
-|------------------|----------------------------------------------------|
-| updateIntervalMs | Update interval in milliseconds. Defaults to 10min |
+|      Option      | Beschribig
+|------------------|-------------
+| city             | Vo welem Standort du ds Wätter wosch wüsse. Müglechi Optione si 'brienz', 'interlaken', 'thun', 'bern', 'hagneck', 'biel' u 'brugg'
+| forecast         | I welem Layout d Vorhärsag söu aazeigt wärde ('vertical', 'horizontal' odr 'none')
+| updateIntervalMs | I welem Intervau sech ds Modul söu aktualisiere (au 10min per Default)
