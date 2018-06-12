@@ -53,11 +53,10 @@ Module.register('MMM-AareGuru', {
     if (this.response['aare'] === undefined) {
       return { loading: true };
     }
-    return {
-      ...this.response['aare'],
-      loading: false,
-      forecast: this.config.forecast,
-    };
+    const aare = this.response['aare'];
+    aare['loading'] = false;
+    aare['forecast'] = this.config.forecast;
+    return aare;
   },
 
   getStyles: function () {
