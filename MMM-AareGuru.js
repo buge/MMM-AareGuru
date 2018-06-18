@@ -28,7 +28,7 @@ Module.register('MMM-AareGuru', {
     updateIntervalMs: 10 * 60 * 1000,
 
     // API location.
-    api: 'https://aareguru.existenz.ch/v2018/current',
+    api: 'https://aareguru.existenz.ch/v2018/current?app=MMM-AareGuru',
   },
 
   requiresVersion: '2.2.1',
@@ -65,7 +65,7 @@ Module.register('MMM-AareGuru', {
 
   getData: function () {
     const request = new XMLHttpRequest();
-    request.open('GET', `${this.config.api}?city=${this.config.city}`, true);
+    request.open('GET', `${this.config.api}&city=${this.config.city}`, true);
     request.onreadystatechange = () => {
       if (request.readyState != 4) {
         return;
