@@ -3,7 +3,7 @@
 *Don't speak Bärndütsch? [See this README in English](README-en.md).*
 
 Mit em MMM-AareGuru chasch d [aare.guru](https://aare.guru/) Tämperatur uf
-dim [MagicMirror²](https://github.com/MichMich/MagicMirror/) Spigu aazeige.
+dim [MagicMirror²](https://github.com/MichMich/MagicMirror/) Spiegu aazeige.
 
 ![Display](display.png)
 
@@ -19,7 +19,7 @@ Repo kloone:
 git clone https://github.com/buge/MMM-AareGuru
 ```
 
-Konfigurier ds Modul in dim `config.js`:
+Konfigurier ds Modul i dim `config.js`:
 ```js
 modules: [
 	{
